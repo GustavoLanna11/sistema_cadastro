@@ -1,0 +1,42 @@
+body{
+    background: rgb(117,19,147);
+background: linear-gradient(276deg, rgba(117,19,147,1) 0%, rgba(0,0,0,1) 72%);
+}
+
+#box{
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #D9D9D9;
+    width: 1050px;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+}
+
+#boximg{
+    width: 525px;
+    background-color: #C8C1C1;
+    height: 500px;
+    border-radius: 20px;
+}
+
+#img{
+    margin-top: 20%;
+}
+
+#titulo{
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#txt{
+    font-weight:lighter;
+    font-size: 18px;
+}
+
+#cadastro{
+    margin-left: 50px;
+}
