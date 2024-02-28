@@ -40,3 +40,44 @@ background: linear-gradient(276deg, rgba(117,19,147,1) 0%, rgba(0,0,0,1) 72%);
 #cadastro{
     margin-left: 50px;
 }
+
+#botao{
+    background-color: #751393;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    width: 120px;
+    height: 30px;
+    margin-top: 30px;
+}
+
+#botao:hover{
+    transform:scale(0.95);
+    background-color: rgb(255, 255, 255);
+    color: #751393;
+    border-color: #751393;
+}
+
+#txtcadastro{
+    margin-left: 200px;
+    margin-top: 25px;
+    
+}
+
+#txtcadastro:hover{
+    transform:scale(0.95);
+    color: #751393;
+
+}
+
+#email{
+    border: none;
+    border-radius: 20px;
+    width: 300px
+}
+
+#senha{
+    border: none;
+    border-radius: 20px;
+    width: 300px
+}
