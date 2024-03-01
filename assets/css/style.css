@@ -1,6 +1,7 @@
 body{
     background: rgb(117,19,147);
-background: linear-gradient(276deg, rgba(117,19,147,1) 0%, rgba(0,0,0,1) 72%);
+background: linear-gradient(276deg, rgba(117,19,147,1) 0%, rgba(189,59,59,1) 100%);
+
 }
 
 #box{
