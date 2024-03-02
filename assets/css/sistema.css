@@ -9,3 +9,35 @@ background: linear-gradient(276deg, rgba(117,19,147,1) 0%, rgba(189,59,59,1) 100
     background: rgba(0, 0, 0, 0.3);
     border-radius: 15px 15px 0 0;
 }
+
+#navbar{
+    background-color: #d9d9d9;
+    border-radius: 30px;
+    margin-top: 30px;
+    width: 1300px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px 5px #050505;
+}
+
+#navbaritem{
+    color: #6d6c6c;
+    font-size: larger;
+    font-weight:500;
+}
+
+#navbaritem:hover{
+    transform: scale(0.94);
+    color: rgb(117,19,147);
+    
+}
+
+.navbar-nav{
+    margin-left: 50px;
+}
+
+#img{
+    width: 70px;
+    margin-left: 3%;
+}

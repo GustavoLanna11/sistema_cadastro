@@ -71,11 +71,11 @@
     <div id="box_form">
       <form action="cadastrar.php" method="POST">
 
-
-      
+      <br>
       <div id="fundo">
         <p id="titulo_c"><i>Cadastro Pessoal</i></p>
       </div>
+     
 
       <a href="index.php"><i class="bi bi-back" id="icon">Voltar</i></a>
 

@@ -87,13 +87,13 @@ background: linear-gradient(276deg, rgba(117,19,147,1) 0%, rgba(189,59,59,1) 100
 
 
 #box_form{
-    margin-top: 5%;
+    margin-top: 3%;
     margin-left: auto;
     margin-right: auto;
-
+    
     background-color: #D9D9D9;
     width: 850px;
-    height: 800px;
+    height: 820px;
     border-radius: 40px;
 }
 
@@ -110,7 +110,7 @@ background: linear-gradient(276deg, rgba(117,19,147,1) 0%, rgba(189,59,59,1) 100
 #fundo{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    
     background-color: #751393;
     width: 350px;
     height: 100px;
@@ -133,6 +133,7 @@ background: linear-gradient(276deg, rgba(117,19,147,1) 0%, rgba(189,59,59,1) 100
 input{
     border: none;
     border-radius: 20px;
+    
 }
 
 #sep{
@@ -153,10 +154,10 @@ input{
     border: none;
     color: white;
     border-radius: 20px;
-    width: 150px;
-    height: 30px;
-    margin-top: 30px;
-    margin-left: 550px;
+    width: 200px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 525px;
     margin-right: auto;
 }
 
@@ -169,8 +170,29 @@ input{
 
 #icon{
     margin-left: 150px;
+    text-decoration: none;
 }
 
 #icon:hover{
     color: #751393;
+}
+
+
+#update{
+    background-color: #751393;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 525px;
+    margin-right: auto;
+}
+
+#update:hover{
+    transform:scale(0.95);
+    background-color: rgb(255, 255, 255);
+    color: #751393;
+    border-color: #751393;
 }
