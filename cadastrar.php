@@ -36,25 +36,38 @@
     $estado = $_POST['estado'];
     $cidade = $_POST['cidade'];
     $endereco = $_POST['endereco'];
+    $cep = $_POST['cep'];
+    $numero = $_POST['numero'];
+    $idade = $_POST['idade'];
 
-    $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,senha,email,data_nasc,telefone,sexo,cpf,estadocivil,estado,cidade,endereco) VALUES ('$nome','$senha','$email','$data_nasc','$telefone','$sexo','$cpf','$estadocivil','$estado','$cidade','$endereco')");
+  
+    $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,senha,email,data_nasc,telefone,sexo,cpf,estadocivil,estado,cidade,endereco,cep,numero,idade) VALUES ('$nome','$senha','$email','$data_nasc','$telefone','$sexo','$cpf','$estadocivil','$estado','$cidade','$endereco','$cep','$numero','$idade')");
 
     header('Location: index.php');
-
   }
 
 
+  
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="utf-8">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- VALIDAÇÃO DE CPF, TELEFONE E CEP -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#cpf").mask("000.000.000-00");
+      $("#telefone").mask("(00) 00000-0000");
+      $("#cep").mask("00000-000");
+    })
+  </script>
+  <!-- VALIDAÇÃO DE CPF, TELEFONE E CEP -->
+
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -64,22 +77,32 @@
 
   <link rel="icon" type="image/x-icon" href="assets/imagens/cadastro.png">
   <title>Cadastro</title>
+
+  <!-- Função para limpar o formulário -->
+  <script>
+    function limpa () {
+      document.getElementById("nome").value=""
+      document.getElementById("senha").value=""
+    }
+  </script>
+  <!-- Função para limpar o formulário -->
 </head>
 <body>
+  
   <div id="wrapper">
-    
     <div id="box_form">
       <form action="cadastrar.php" method="POST">
-
+      <script src="js/main.js"></script>
       <br>
-      <div id="fundo">
+      <div>
+        <div id="fundo">
         <p id="titulo_c"><i>Cadastro Pessoal</i></p>
       </div>
+      </div>
+      
      
-
       <a href="index.php"><i class="bi bi-back" id="icon">Voltar</i></a>
 
-      
       <div id="formulario">
 
         <div id=pag1>
@@ -94,40 +117,47 @@
   
           <h4 id="input">Data de nascimento:</h4>
           <input type="date" name="data_nasc" id=""><br><br>
+
+          <h4 id="input">Idade:</h4>
+          <input type="text" name="idade" id=""><br><br>
   
           <h4 id="input">Telefone:</h4>
-          <input type="tel" name="telefone" id="">
+          <input type="tel" name="telefone" id="telefone">
           <br><br>
 
-          <h4 id="input">Sexo:</h4>
-        <input type="radio" id="feminino" name="genero" value="feminino" required>
-        <label for="feminino">Feminino</label>
-        <br>
-        <input type="radio" id="masculino" name="genero" value="masculino" required>
-        <label for="masculino">Masculino</label>
-        <br>
-        <input type="radio" id="outro" name="genero" value="outro" required>
-        <label for="outro">Outro</label>
-        <br><br>
+          
+
+        <h4 id="input">CPF:</h4>
+        <input type="text" name="cpf" id="cpf"><br><br>
+
         </div>
         <!-- FINAL DA PRIMEIRA PÁGINA -->
 
         <div id="sep"></div>
 
         <div id="pag2">
-        <h4 id="input">CPF:</h4>
-        <input type="text" name="cpf" id=""><br><br>
+      
+        <h4 id="input">Sexo:</h4>
+        <input type="radio" id="feminino" name="genero" value="feminino" required>
+        <label for="feminino">Feminino</label>
+        
+        <input type="radio" id="masculino" name="genero" value="masculino" required>
+        <label for="masculino">Masculino</label>
+       
+        <input type="radio" id="outro" name="genero" value="outro" required>
+        <label for="outro">Outro</label>
+        <br><br>
 
         <h4 id="input">Estado civil:</h4>
         <input type="radio" id="casado" name="tipo" value="casado" required>
         <label for="casado">Casado</label>
-        <br>
+        
         <input type="radio" id="solteiro" name="tipo" value="solteiro" required>
         <label for="solteiro">Solteiro</label>
         <br>
         <input type="radio" id="divorciado" name="tipo" value="divorciado" required>
         <label for="divorciado">Divorciado</label>
-        <br>
+        
         <input type="radio" id="viuvo" name="tipo" value="viuvo" required>
         <label for="viuvo">Viúvo(a)</label>
         <br><br>
@@ -139,24 +169,25 @@
         <input type="text" name="cidade" id=""><br><br>
 
         <h4 id="input">Endereço:</h4>
-        <input type="text" name="endereco" id="">
+        <input type="text" name="endereco" id=""><br><br>
+
+        <h4 id="input">CEP:</h4>
+        <input type="text" name="cep" id="cep"><br><br>
+
+        <h4 id="input">Número:</h4>
+        <input type="text" name="numero" id="">
         </div>
       </div>
 
-      <input type="submit" value="CADASTRAR" id="botao2" name="submit">
+    
+        <input type="submit" value="LIMPAR" id="botao2" name="limpa">
+        <input type="submit" value="SALVAR" id="botao2" name="submit">
+     
       
       </form>
     </div>
 
-
     </div>
-
-    
-
-     
-      
-      
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"                '         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
   </script>
 </body>

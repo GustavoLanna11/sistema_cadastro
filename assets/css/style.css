@@ -98,24 +98,22 @@ background: linear-gradient(276deg, rgba(117,19,147,1) 0%, rgba(189,59,59,1) 100
 }
 
 #titulo_c{
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 10px;
     color: white;
 }
 
 #fundo{
     margin-left: auto;
     margin-right: auto;
-    
     background-color: #751393;
-    width: 350px;
-    height: 100px;
+    width: 320px;
+    height: 60px;
     border-radius: 50px;
-
     box-shadow: 10px 5px 5px #C8C1C1;
     display: flex;
 }
@@ -123,11 +121,15 @@ background: linear-gradient(276deg, rgba(117,19,147,1) 0%, rgba(189,59,59,1) 100
 #formulario{
     display: flex;
     gap: 100px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 #pag1{
-    margin-left: 140px;
+    margin-left: 110px;
+}
+
+#pag2{
+    margin-right: 20px;
 }
 
 input{
@@ -140,7 +142,7 @@ input{
     width: 2px;
     border-radius: 20px;
     background-color: #751393;
-    height: 500px
+    height: 550px
 }
 
 #input{
@@ -156,9 +158,8 @@ input{
     border-radius: 20px;
     width: 200px;
     height: 40px;
-    margin-top: 10px;
-    margin-left: 525px;
-    margin-right: auto;
+    margin-top: 30px;
+    margin-left: 150px;
 }
 
 #botao2:hover{
@@ -173,6 +174,10 @@ input{
     text-decoration: none;
 }
 
+#caixa1{
+    display: flex;
+}
+
 #icon:hover{
     color: #751393;
 }
@@ -185,9 +190,8 @@ input{
     border-radius: 20px;
     width: 200px;
     height: 40px;
-    margin-top: 10px;
-    margin-left: 525px;
-    margin-right: auto;
+    
+    margin-left: 540px;
 }
 
 #update:hover{
@@ -196,3 +200,5 @@ input{
     color: #751393;
     border-color: #751393;
 }
+
+

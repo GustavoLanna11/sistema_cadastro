@@ -25,6 +25,9 @@
             $estado = $user_data['estado'];
             $cidade = $user_data['cidade'];
             $endereco = $user_data['endereco'];
+            $cep = $user_data['cep'];
+            $numero = $user_data['numero'];
+            $idade = $user_data['idade'];
         }
         
     }
@@ -55,6 +58,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/home.css">
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#cpf").mask("000.000.000-00");
+      $("#telefone").mask("(00) 00000-0000");
+      $("#cep").mask("00000-000");
+    })
+
+  </script>
 
   <link rel="icon" type="image/x-icon" href="assets/imagens/cadastro.png">
   <title>Cadastro</title>
@@ -88,6 +102,10 @@
   
           <h4 id="input">Data de nascimento:</h4>
           <input type="date" name="data_nasc" id="" value="<?php echo $data_nasc ?>"><br><br>
+
+          <h4 id="input">Idade:</h4>
+          <input type="tel" name="telefone" id="" value="<?php echo $idade ?>">
+          <br><br>
   
           <h4 id="input">Telefone:</h4>
           <input type="tel" name="telefone" id="" value="<?php echo $telefone ?>">
@@ -96,21 +114,23 @@
           <h4 id="input">Sexo:</h4>
         <input type="radio" id="feminino" name="sexo" value="feminino" <?php echo ($sexo == 'feminino') ? 'checked' : '' ?> required>
         <label for="feminino">Feminino</label>
-        <br>
+        
         <input type="radio" id="masculino" name="sexo" value="masculino" <?php echo ($sexo == 'masculino') ? 'checked' : '' ?> required>
         <label for="masculino">Masculino</label>
-        <br>
+        
         <input type="radio" id="outro" name="sexo" value="outro" <?php echo ($sexo == 'outro') ? 'checked' : '' ?> required>
         <label for="outro">Outro</label>
         <br><br>
+
+        <h4 id="input">CPF:</h4>
+        <input type="text" name="cpf" id="cpf" value="<?php echo $cpf ?>"><br><br>
         </div>
         <!-- FINAL DA PRIMEIRA PÁGINA -->
 
         <div id="sep"></div>
 
         <div id="pag2">
-        <h4 id="input">CPF:</h4>
-        <input type="text" name="cpf" id="" value="<?php echo $cpf ?>"><br><br>
+        
 
         <h4 id="input">Estado civil:</h4>
         <input type="radio" id="casado" name="tipo" value="casado" <?php echo ($estadocivil == 'casado') ? 'checked' : '' ?> required>
@@ -133,7 +153,13 @@
         <input type="text" name="cidade" id="" value="<?php echo $cidade ?>"><br><br>
 
         <h4 id="input">Endereço:</h4>
-        <input type="text" name="endereco" id="" value="<?php echo $endereco ?>">
+        <input type="text" name="endereco" id="" value="<?php echo $endereco ?>"><br><br>
+
+        <h4 id="input">CEP:</h4>
+        <input type="text" name="cep" id="cep" value="<?php echo $cep ?>"><br><br>
+
+        <h4 id="input">Número:</h4>
+        <input type="text" name="numero" id="" value="<?php echo $numero ?>">
         </div>
       </div>
       

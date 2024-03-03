@@ -16,8 +16,10 @@
         $estado = $_POST['estado'];
         $cidade = $_POST['cidade'];
         $endereco = $_POST['endereco'];
+        $cep = $_POST['cep'];
+        $numero = $_POST['numero'];
 
-        $sqlUpdate = "UPDATE usuarios SET nome='$nome',senha='$senha',email='$email',data_nasc='$data_nasc',telefone='$telefone',sexo='$sexo',cpf='$cpf',estadocivil='$estadocivil',estado='$estado',cidade='$cidade',endereco='$endereco' WHERE id='$id'";
+        $sqlUpdate = "UPDATE usuarios SET nome='$nome',senha='$senha',email='$email',data_nasc='$data_nasc',telefone='$telefone',sexo='$sexo',cpf='$cpf',estadocivil='$estadocivil',estado='$estado',cidade='$cidade',endereco='$endereco',cep='$cep',numero='$numero' WHERE id='$id'";
 
         $result = $conexao->query($sqlUpdate);
 

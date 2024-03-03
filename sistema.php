@@ -59,6 +59,7 @@
       <th scope="col">Email</th>
       <th scope="col">Senha</th>
       <th scope="col">Data de Nascimento</th>
+      <th scope="col">Idade</th>
       <th scope="col">Telefone</th>
       <th scope="col">Sexo</th>
       <th scope="col">CPF</th>
@@ -66,7 +67,9 @@
       <th scope="col">Estado</th>
       <th scope="col">cidade</th>
       <th scope="col">Endereço</th>
-      <th scope="col">...</th>
+      <th scope="col">Cep</th>
+      <th scope="col">Número</th>
+      <th scope="col">Ações</th>
     </tr>
   </thead>
   <tbody>
@@ -79,6 +82,7 @@
             echo "<td>".$user_data['email']."</td>";
             echo "<td>".$user_data['senha']."</td>";
             echo "<td>".$user_data['data_nasc']."</td>";
+            echo "<td>".$user_data['idade']."</td>";
             echo "<td>".$user_data['telefone']."</td>";
             echo "<td>".$user_data['sexo']."</td>";
             echo "<td>".$user_data['cpf']."</td>";
@@ -86,6 +90,8 @@
             echo "<td>".$user_data['estado']."</td>";
             echo "<td>".$user_data['cidade']."</td>";
             echo "<td>".$user_data['endereco']."</td>";
+            echo "<td>".$user_data['cep']."</td>";
+            echo "<td>".$user_data['numero']."</td>";
             echo "<td>
                 <a class='btn btn-primary' href='edit.php?id=$user_data[id]'>
                 <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
